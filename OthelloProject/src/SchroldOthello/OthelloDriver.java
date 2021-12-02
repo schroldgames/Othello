@@ -90,7 +90,9 @@ public class OthelloDriver {
 			if (currentPlayer==Board1d.ME) {
 				move = board.getMyMove();
 				/* Output my move for the referee */
-				System.out.printf("%s %s\n", myColor, move.toString());
+				String moveString = String.format("%s %s",
+						myColor, move.toString()).trim();
+				System.out.println(moveString);
 			} else {
 				move = board.getOpponentMove();
 			}
